@@ -42,6 +42,10 @@ Fsm::~Fsm()
   m_timed_transitions = NULL;
 }
 
+State* Fsm::get_current_state()
+{
+  return m_current_state;
+}
 
 void Fsm::add_transition(State* state_from, State* state_to, int event,
                          void (*on_transition)())
